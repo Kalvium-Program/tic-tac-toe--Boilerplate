@@ -1,3 +1,4 @@
+// Iteration 1: Declaring variables
 const boxElement=document.querySelectorAll(".box");
 var winningCombinations = [
     [0, 1, 2],
@@ -17,6 +18,7 @@ const message= document.getElementById("message");
 const gameResult=document.getElementById("result");
 const restart=document.getElementById("button");
 
+// Iteration 2: Adding onclick function
 boxElement.forEach(box=>{
     console.log(box);
     box.onclick  = handleClick;
@@ -25,12 +27,12 @@ function handleClick(e){
     console.log(e.target);//
     console.log(e.target.getAttribute('id'));//getAttribute will get the id from the e.target
     const i=e.target.getAttribute('id');//stores the id 
-    const text = document.createElement('p');//create element p stores it in text
+    const text = document.createElement('p');//create element p for storing text
     text.setAttribute('id','text');//set the attribute id and value for text variable 
     boxElement[i-1].appendChild(text);//append the newly created element text to the boxElement
     console.log(boxElement[i-1]);
     if(click%2 == 0){//the value for click initially is 0
-        xAttempts.push(parseInt(i-1));//push the value in the xAttempts array which s intially empty.
+        xAttempts.push(parseInt(i-1));//push the value in the xAttempts array which is intially empty.
         console.log(xAttempts);
         text.innerHTML="X";//set "X" for "text" element 
         text.style.color = '#FAB201';//apply style i.e the color to the text element
