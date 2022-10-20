@@ -18,7 +18,7 @@ const message= document.getElementById("message");
 const gameResult=document.getElementById("result");
 const restart=document.getElementById("button");
 
-// Iteration 2: Adding onclick function
+// Iteration 2: Onclick function
 boxElement.forEach(box=>{
     console.log(box);
     box.onclick  = handleClick;
@@ -51,6 +51,8 @@ function handleClick(e){
             message.innerHTML = "It's a tie 🤝 ";
     }
 }
+
+// Iteration 3: Result function
 function result(winningCombinations, attempts, player){
     let flag = 0;
     let checker = [];
@@ -74,6 +76,8 @@ function result(winningCombinations, attempts, player){
             wonTheGame=1;   
     }
 }
+
+// Iteration 4: Restart function
 
 restart.onclick=()=>{ //restarts the game when the user clicks on the button restart i.e play again
     history.go(0);
